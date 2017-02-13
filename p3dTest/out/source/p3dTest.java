@@ -23,11 +23,12 @@ public void setup(){
 public void draw(){
   background(0);
   translate(width/2,height/2);
-  rotateY(rot);
+  rotateX(mouseY/50.0f);
+  rotateY(mouseX/50.0f);
   box(150,150,150);
-  rot += 0.06f;
+  println(mouseX,mouseY);
 }
-  public void settings() {  size(400,400,P3D); }
+  public void settings() {  size(400,400,OPENGL); }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "p3dTest" };
     if (passedArgs != null) {

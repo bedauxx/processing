@@ -1,13 +1,14 @@
 float rot=0;
 
 void setup(){
-  size(400,400,P3D);
+  size(400,400,OPENGL);
 }
 
 void draw(){
   background(0);
   translate(width/2,height/2);
-  rotateY(rot);
+  rotateX(mouseY/50.0);
+  rotateY(mouseX/50.0);
   box(150,150,150);
-  rot += 0.06;
+  println(mouseX,mouseY);
 }
