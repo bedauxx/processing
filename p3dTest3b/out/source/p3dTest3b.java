@@ -12,7 +12,7 @@ import java.io.InputStream;
 import java.io.OutputStream; 
 import java.io.IOException; 
 
-public class p3dTest3 extends PApplet {
+public class p3dTest3b extends PApplet {
 
 final int AMOUNT = 33;
 
@@ -93,7 +93,7 @@ pointLight(51, 102, 126, 35, 40, 36);
 }
   public void settings() {  size(500, 500, P3D);  smooth(); }
   static public void main(String[] passedArgs) {
-    String[] appletArgs = new String[] { "p3dTest3" };
+    String[] appletArgs = new String[] { "p3dTest3b" };
     if (passedArgs != null) {
       PApplet.main(concat(appletArgs, passedArgs));
     } else {
