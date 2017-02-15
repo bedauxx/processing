@@ -9,6 +9,9 @@ void draw(){
   rotateX(frameCount*0.01);
   rotateY(frameCount*0.01);
   
+  //println("frameCount: "+frameCount);
+
+
   // 一つ前の座標を格納する
   float lastX = 0, lastY = 0, lastZ = 0;
   float radius = 200;

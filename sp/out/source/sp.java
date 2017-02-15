@@ -25,6 +25,9 @@ public void draw(){
   rotateX(frameCount*0.01f);
   rotateY(frameCount*0.01f);
   
+  //println("frameCount: "+frameCount);
+
+
   // \u4e00\u3064\u524d\u306e\u5ea7\u6a19\u3092\u683c\u7d0d\u3059\u308b
   float lastX = 0, lastY = 0, lastZ = 0;
   float radius = 200;
