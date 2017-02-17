@@ -69,6 +69,15 @@ public void draw() {
   }else{
       background(0);
   }
+
+
+  pushMatrix();  
+  applyMatrix(1.0f,  0.0f, 0.0f, 0.0f,  
+              0.0f, 1.0f, 0.0f, 0.0f,  
+              0.0f,  0.0f, -1.0f, 0.0f,  
+              0.0f,  0.0f, 0.0f, 1.0f); 
+
+
   angle +=1;
   if(angle > 360) angle = 0; 
   translate(width/2, height/2);
@@ -76,8 +85,8 @@ public void draw() {
   //rotateX(mouseY / 200.0);
   rotateX(radians(angle));
   rotateZ((mouseY * mouseX) / 20000.0f + radians(angle));
-ambientLight(51, 102, 126);
-pointLight(51, 102, 126, 35, 40, 36);
+  ambientLight(51, 102, 126);
+  pointLight(51, 102, 126, 35, 40, 36);
   for (int i = 0; i < AMOUNT; i++) {
     fill(color1[i],color2[i],color3[i]);
     beginShape();
@@ -89,7 +98,9 @@ pointLight(51, 102, 126, 35, 40, 36);
     //point(x[i], y[i], z[i]);
     //line(x[i], y[i], z[i],x2[i], y2[i], z2[i]);
     //stroke(color1[i],color2[i],color3[i]);
+
   }
+  popMatrix();
 }
   public void settings() {  size(500, 500, P3D);  smooth(); }
   static public void main(String[] passedArgs) {
